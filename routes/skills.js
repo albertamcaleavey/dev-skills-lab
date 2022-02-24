@@ -7,14 +7,7 @@ const router = Router()
 //   res.send('respond with a resource')
 // })
 
-router.get('/', function(req, res) {
-  skillDb.find({}, function(error, skills) {
-    res.render('skills/index', {
-      skills: skills,
-      error: error
-    })
-  })
-})
+router.get('/', )
 
 export {
   router
