@@ -11,6 +11,8 @@ router.get('/new', skillsCtrl.new)
 router.get('/:id', skillsCtrl.show)
 // route to function that creates a new skill
 router.post('/', skillsCtrl.create)
+// route to function that renders a view, deleting the selected skill
+router.delete('/:id', skillsCtrl.delete)
 
 export {
   router
