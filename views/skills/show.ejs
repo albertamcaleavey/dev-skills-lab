@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Express Dev Skills</title>
+  <title><%= skill.text %> </title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-  <h1>Express Dev Skills</h1>
   <% if (error) { %>
     <h2><%= error %></h2>
   <% } else { %>
-    <h2> Skill #<%= skill._id %></h2>
-    <h3><%= skill.text %></h3>
-    <p>Learned: <%= skill.learned ? 'Yes' : 'No' %></p>
+    <h2 class="skill-id"> Skill #<%= skill._id %></h2>
+    <h1 class="skill-name"><%= skill.text %></h1>
+    <p><strong>Description:</strong><% if (!skill.description) { %>
+      <%= 'Unknown' %>
+    <% } else { %>
+      <%= skill.description %>
+    <% } %></p>
+    <p><strong>Learned: </strong><%= skill.learned ? 'Yes' : 'No' %></p>
     <% } %>
-    <a href="/skills">Go Back</a>
+    <a href="/skills" class="go-back">Go Back</a>
 </body>
 </html>

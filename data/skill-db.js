@@ -1,8 +1,9 @@
 const skills = [
-  {text: 'JavaScript', learned: true, _id: 120000},
-  {text: 'CSS', learned: true, _id: 120001},
-  {text: 'HTML', learned: true, _id: 120002},
-  {text: 'Python', learned: false, _id: 120003}
+  {text: 'JavaScript', description: 'A multi-paradigm, high level, interpreted, event-oriented programming language.', learned: true, _id: 120000},
+  {text: 'CSS', description: 'CSS is a web technology used to format and style HTML documents and provides stylistic behaviors using CSS animations.', learned: true, _id: 1},
+  {text: 'HTML', description: 'A markup language used to create the basic structure of documents on the Internet.', learned: true, _id: 2},
+  {text: 'Python', description: 'Unknown', learned: false, _id: 3},
+  {text: 'React', description: 'Unknown', learned: false, _id: 4}
 ]
 
 const find = (conditions, callback) => {
@@ -13,7 +14,6 @@ const find = (conditions, callback) => {
     if (Object.keys(conditions).length === 0) return callback(null, skills)
 	// deal with errors
   } catch (error) {
-    console.log(error)
     callback(error, [])
   }
 }
@@ -24,7 +24,6 @@ const findById = (id, callback) =>{
     if (!skill) throw new Error ('No skill was found')
     return callback(null, skill)
   } catch (error) {
-    console.log(error)
     return callback(error, null)
   }
 }

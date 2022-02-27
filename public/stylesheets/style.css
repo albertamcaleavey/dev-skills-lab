@@ -1,10 +1,22 @@
 body {
   padding: 50px;
+  padding-left: 30%;
+  padding-right: 30%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  background-color: #ECF3E8;
+  color: #384B41
+}
+
+p {
+  align-self: baseline;
 }
 
 a {
-  color: #00B7FF;
+  color: #384B41
 }
 
 .delete-form {
@@ -18,4 +30,29 @@ a {
 
 li {
   list-style: none;
+  padding: 0;
+  margin: 10px;
+  align-self: baseline;
+}
+
+ul {
+  padding: 0;
+}
+
+.add-skill, .go-back {
+  color: #7fa175;
+  margin-top: 30px;
+}
+.skill-id {
+  display: none;
+}
+
+.skill-name {
+  font-size: 27px;
+  padding-bottom: 30px;
+}
+
+.input {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
