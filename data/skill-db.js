@@ -1,6 +1,6 @@
 const skills = [
   {text: 'JavaScript', learned: true, _id: 120000},
-  {text: 'CSS Grid', learned: true, _id: 120001},
+  {text: 'CSS', learned: true, _id: 120001},
   {text: 'HTML', learned: true, _id: 120002},
   {text: 'Python', learned: false, _id: 120003}
 ]
